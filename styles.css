@@ -299,6 +299,22 @@ utilities;
 }
 
 @layer components {
+    .skip-to-main:not(:focus) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    .skip-to-main {
+        position: absolute;
+        padding: 1rem;
+        background-color: var(--background-accent-main);
+        border-radius: var(--border-radius-2);
+    }
+
     .equal-columns {
         display: grid;
         gap: var(--equal-columns-gap, 1rem);
